@@ -164,10 +164,9 @@ public class App {
                     continue;
                     }
                 }
-
-            if (cardList.contains(enteredPokemon) && cardList.contains(fiveStarPokemon)) {
                 int idxEnteredPokemon = cardList.indexOf(enteredPokemon);
                 int idx5StarPokemon = cardList.indexOf(fiveStarPokemon);
+            if (cardList.contains(enteredPokemon) && cardList.contains(fiveStarPokemon) && (idx5StarPokemon > idxEnteredPokemon)) {
                 System.out.printf("Set %d\n %s >>>>>> %d cards to go\n", i + 1,fiveStarPokemon,(idx5StarPokemon-idxEnteredPokemon));
             } else if (cardList.contains(enteredPokemon)) {
                 System.out.printf("Set %d\nNo 5 stars Pokemon found subsequently in the stack.\n", i + 1);
